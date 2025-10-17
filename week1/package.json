@@ -1,0 +1,27 @@
+{
+  "name": "week1-hardhat",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage",
+    "deploy:erc20": "hardhat run --network $NETWORK scripts/deploy-erc20.ts",
+    "deploy:erc721": "hardhat run --network $NETWORK scripts/deploy-erc721.ts",
+    "verify": "hardhat run --network $NETWORK scripts/verify.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.14.2",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+}
+
