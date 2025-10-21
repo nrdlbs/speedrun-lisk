@@ -24,12 +24,16 @@ contract MyNFT is ERC721, Ownable {
         _baseTokenURI = newBaseURI;
     }
 
-    function safeMint(address to) external onlyOwner returns (uint256 tokenId) {
+    function mint(address to) external onlyOwner returns (uint256 tokenId) {
         tokenId = _nextTokenId++;
         _safeMint(to, tokenId);
     }
 
     function _baseURI() internal view override returns (string memory) {
         return _baseTokenURI;
+    }
+
+    function totalSupply() public view returns (uint256) {
+        return _nextTokenId - 1;
     }
 }

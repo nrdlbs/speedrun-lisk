@@ -29,8 +29,8 @@ npm test
 Use `NETWORK` env or pass Hardhat flag.
 
 ```bash
-NETWORK=holesky npm run deploy:erc20
-NETWORK=holesky npm run deploy:erc721
+NETWORK=liskSepolia npm run deploy:erc20
+NETWORK=liskSepolia npm run deploy:erc721
 ```
 
 ### Verify
@@ -38,7 +38,7 @@ NETWORK=holesky npm run deploy:erc721
 Auto-verify by setting `VERIFY=true` before deploy, or run separately:
 
 ```bash
-NETWORK=holesky CONTRACT_ADDRESS=0x... ARGS='["MyToken","MTK","0xOwner","1000000000000000000"]' npm run verify
+NETWORK=liskSepolia CONTRACT_ADDRESS=0x... ARGS='["MyToken","MTK","0xOwner","1000000000000000000"]' npm run verify
 ```
 
 Etherscan API selection is configured in `hardhat.config.ts` (sepolia/holesky supported).
